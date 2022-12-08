@@ -1,0 +1,2 @@
+// install mongodb node driver
+$ npm install --save mongodb
