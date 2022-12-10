@@ -11,6 +11,6 @@ app.use(bodyParser.json());
 app.post("/products", mongoPractice.createProduct);
 
 // give me all the documents stored in a specific collection
-app.get("/products");
+app.get("/products", mongoPractice.getProducts);
 
 app.listen(3000);
