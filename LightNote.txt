@@ -1,2 +1,6 @@
 // install mongodb node driver
 $ npm install --save mongodb
+
+// install Mongoose
+$ npm install --save mongoose
+
