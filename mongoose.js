@@ -16,8 +16,10 @@ const createProduct = async (req, res, next) => {
     name: req.body.name,
     price: req.body.price,
   });
+  console.log(typeof createdProduct.id, createdProduct.id);
+  console.log(typeof createdProduct._id, createdProduct._id);
+  const result = await createdProduct.save();
   try {
-    const result = await createdProduct.save();
     res.json(result);
   } catch (error) {
     console.log("Document inserting error:", error);
