@@ -24,4 +24,14 @@ const createProduct = async (req, res, next) => {
   }
 };
 
+const getProducts = async (req, res, next) => {
+  try {
+    const products = await Product.find().exec();
+    res.json(products);
+  } catch (error) {
+    console.log("Document getting error:", error);
+  }
+};
+
 exports.createProduct = createProduct;
+exports.getProducts = getProducts;
